@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Feedback Analysis</title>
+      <style>
+         ul.a {
+  list-style-type: circle;
+}
+</style>
+   </head>
+   <body>
+       {% extends "template.html" %}
+       {% block content %}
+      <h1> Feed Back Analysis Of Telugu Data </h1>
+      <h2> This is a web interface for analysing telugu feedback data in order to determine the polarity of sentences. We have provided three different techniques to analyse the data entered by the user.</h2>
+      <ul class="a"><h3>
+         <li>Naive Bayes</li>
+         <li>Support Vector Machine</li>
+         <li>Recurrent Neural Network</li></h3>
+         </ul>
+      <h2>You can try the above by clicking on Predict above<h2>
+      <h2> You can also try the realtime working by clicking on Realtime where we extract the tweets from twitter and analyse the sentiment</h2>
+      {% endblock %}
+   </body>
+</html>

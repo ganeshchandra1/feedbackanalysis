@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+	<title>Twitteranalysis</title>
+</head>
+<body>
+	<div>
+		<form class="form-inline" method="POST" action="{{ url_for('realtime') }}">
+			<input class="form-control" type="text" name="word">
+	        <button class="btn btn-primary" type="submit">search</button>
+        </form>
+	</div>
+	<br>
+	<div class="container">
+		{% for tweet in tweets %}
+		{{ tweet}}   
+		<br/>
+		{% endfor %}  
+		{% if per1%}
+		<h2>Positive</h2>
+		{{ per1 }}
+		{% endif %}
+		{% if per2 %}
+		<h2>Negative</h2>
+		{{ per2 }}
+		{% endif %}
+   </div>
+</body>
+</html>
